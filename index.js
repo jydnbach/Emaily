@@ -3,8 +3,8 @@ const express = require('express');
 // es2015 modules e.g. import ... from
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
-require('./services/passport');
 require('./models/User');
+require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
 
