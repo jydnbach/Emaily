@@ -1,7 +1,11 @@
 const express = require('express');
 // common js modules
 // es2015 modules e.g. import ... from
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
 require('./services/passport');
+
+mongoose.connect(keys.mongoURI);
 
 const app = express();
 
